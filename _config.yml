@@ -1,1 +1,36 @@
-theme: jekyll-theme-hacker
+
+title: VHS Corner
+description: >- # this means to ignore newlines until "baseurl:"
+  "The need for people to gather and exchange their stories, 
+  to talk about the things that feel universal,  see that 
+  others share similar experiences. This need to gather 
+  around a campfire and discuss the things that tell each 
+  one of us that we are not alone in the world. This 
+  will never change." -a girl on Youtube
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://www.vhscorner.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
