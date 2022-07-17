@@ -1,2 +1,1 @@
-# vhs-corner
- 🚫 Nostalgia
+[vhscorner.com](https://www.vhscorner.com)
