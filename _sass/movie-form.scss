@@ -1,0 +1,40 @@
+/** @format */
+
+body {
+  padding: 0 1rem;
+}
+h2 {
+  margin-bottom: 0.3rem;
+}
+p {
+  margin: 0 0 0.9rem 0;
+}
+textarea {
+  resize: none;
+  // font-family: Times New Roman;
+  font-size: 1.2em;
+  color: black;
+  outline-width: 0;
+  border: solid 1px #888;
+  max-width: 90vw;
+}
+textarea:focus {
+  border-color: blueviolet;
+}
+textarea:active {
+  border-color: yellow;
+}
+textarea:hover {
+  color: green;
+}
+textarea:disabled {
+  background: #fff;
+  font-size: 1.5em;
+  border-color:white;
+}
+
+input[type="submit"] {
+  margin: 15px 0;
+  font-size: 1rem;
+  padding: 2px 5px;
+}
