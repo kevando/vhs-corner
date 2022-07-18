@@ -7,18 +7,17 @@
   {%- include head.html -%}
 
   <body class="{{ page.layout }} {{ page_name }}">
-
     <header>
-      <h1 class="title">1</h1>
-      <h3 class="subtitle">3</h3>
+      <h1 class="title">Favorite Movie Form</h1>
+      <h3 class="subtitle">type the name of your favorite movie below</h3>
     </header>
-    
+
     <form id="FavoriteMovieSubmissionForm">
       <div class="text-area-wrapper">
-        <!-- 		<textarea placeholder="Type here..." id="FavoriteMovieInput"> </textarea> -->
+        <textarea placeholder="Type here..." id="FavoriteMovieInput"> </textarea>
       </div>
     </form>
-    
+
     {{ content }}
   </body>
 </html>
