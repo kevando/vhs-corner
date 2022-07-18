@@ -1,16 +1,15 @@
 /** @format */
 
 :root {
-  --base-size: 2.5rem;
+  --base-size: 2.05rem;
   --title-size: 10vw;
   --subtitle-size: calc(var(--title-size) * 0.62);
-
-  --header-height: calc(calc(var(--base-size) * 1.62) + var(--base-size));
+  --header-height: calc(calc(var(--base-size) * 1.62) + var(--base-size) + 10px);
 }
 
 header {
-  // height: var(--header-height);
-  margin-bottom:var(--base-size);
+  height: var(--header-height);
+  // margin-bottom:var(--base-size);
   .title {
     font-size: var(--base-size);
     line-height: 1.62em;
@@ -21,4 +20,8 @@ header {
     font-size: calc(var(--base-size) * 0.62);
     margin: 0;
   }
+}
+
+form {
+  max-width: 800px;
 }

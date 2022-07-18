@@ -1,9 +1,7 @@
 
 
 
-form {
-	// border: solid 2px red;
-}
+
 
 .text-area-wrapper {
 	--box-width: calc(100vw - 20px);
@@ -13,7 +11,10 @@ form {
 	// background: yellow;
 	// height: 40px;
 	width: var(--box-width);
-	height: var(--box-height);
+	// height: var(--box-height);
+
+  max-width: 800px;
+  aspect-ratio: 1.62;
 }
 textarea {
 	// border: solid 17px purple;
