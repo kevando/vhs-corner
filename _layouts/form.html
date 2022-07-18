@@ -1,0 +1,24 @@
+<!-- @format -->
+
+{% assign a = page.name | split: '.' %} {% assign page_name = a[0] %}
+
+<!DOCTYPE html>
+<html>
+  {%- include head.html -%}
+
+  <body class="{{ page.layout }} {{ page_name }}">
+
+    <header>
+      <h1 class="title">1</h1>
+      <h3 class="subtitle">3</h3>
+    </header>
+    
+    <form id="FavoriteMovieSubmissionForm">
+      <div class="text-area-wrapper">
+        <!-- 		<textarea placeholder="Type here..." id="FavoriteMovieInput"> </textarea> -->
+      </div>
+    </form>
+    
+    {{ content }}
+  </body>
+</html>

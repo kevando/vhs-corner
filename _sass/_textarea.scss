@@ -1,0 +1,54 @@
+* {
+	box-sizing: border-box;
+}
+
+header {
+	--title-size: 10vw;
+	--subtitle-size: calc(var(--title-size) * 0.62);
+
+	.title {
+		font-size: var(--title-size);
+		line-height: 1em;
+		margin: 0;
+		background: #444;
+	}
+
+	.subtitle {
+		font-size: var(--subtitle-size);
+		margin: 0;
+		background: #eee;
+	}
+}
+form {
+	border: solid 2px red;
+}
+
+.text-area-wrapper {
+	--box-width: calc(100vw - 20px);
+	--box-height: calc(var(--box-width) * 0.618);
+
+	border: solid 3px blue;
+	background: yellow;
+	height: 40px;
+	width: var(--box-width);
+	height: var(--box-height);
+}
+textarea {
+	border: solid 17px purple;
+	height: 100%;
+	width: 100%;
+
+	resize: none;
+	font-family: Times New Roman;
+	outline-width: 0;
+}
+textarea:focus {
+	border-color: blueviolet;
+}
+textarea:active {
+	border-color: yellow;
+}
+
+textarea:hover {
+	color: green;
+}
