@@ -4,13 +4,15 @@ var $title = document.getElementById("Title");
 var $subtitle = document.getElementById("Subtitle");
 var $button = document.getElementById("SaveForm");
 
-var setStatus = function(msg) {
-  document.getElementById("ResponseText").innerHTML = msg;
-};
 
 $textArea.addEventListener("input", onInputChange, false);
 $textArea.addEventListener("keyup", onKeyUp, false);
 $form.addEventListener("submit", onSubmit);
+
+
+function setStatus(msg) {
+  // document.getElementById("ResponseText").innerHTML = msg;
+};
 
 function onInputChange() {
   console.log("changed");
@@ -26,6 +28,10 @@ window.addEventListener("load", function() {
 
 function onSubmit(e) {
   e.preventDefault();
+
+  setTimeout(resetForm,700);
+  return false;
+
   console.log("submitted", $textArea.value);
   if (!$textArea.value.trim()) {
     alert("Nothing was submitted.");
@@ -49,9 +55,9 @@ function showSuccessState() {
 }
 
 function resetForm() {
-  $subtitle.style.visibility = "visible";
-  $button.style.visibility = "visible";
-  $title.innerHTML = "Favorite Movie Submission Form";
-  setStatus("This will be added to your permenant record.");
+  // $subtitle.style.visibility = "visible";
+  // $button.style.visibility = "visible";
+  // $title.innerHTML = "Favorite Movie Submission Form";
+  // setStatus("This will be added to your permenant record.");
   $textArea.value = "";
 }
