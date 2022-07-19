@@ -15,7 +15,7 @@ h3 {
   --base-size: 2.05rem;
   --title-size: 10vw;
   --subtitle-size: calc(var(--title-size) * 0.62);
-  --header-height: calc(calc(var(--base-size) * 1.62) + var(--base-size) + 10px);
+  --header-height: calc(calc(var(--base-size) * 1.62) + var(--base-size) + 0px);
 }
 
 header {
@@ -23,30 +23,23 @@ header {
   // margin-bottom:var(--base-size);
   .title {
     font-size: var(--base-size);
-    line-height: 1.62em;
+    line-height: 1.2em;
     margin: 0;
+    margin-top: 1.62em;
   }
 
   .subtitle {
-    font-size: calc(var(--base-size) * 0.62);
+    font-size: calc(var(--base-size) * 0.56);
     margin: 0;
   }
 }
 
-form {
-  max-width: 800px;
-}
 .text-area-wrapper {
   --box-width: calc(100vw - 20px);
   --box-height: calc(var(--box-width) * 0.618);
 
-  // border: solid 3px blue;
-  // background: yellow;
-  // height: 40px;
   width: var(--box-width);
-  // height: var(--box-height);
-
-  max-width: 800px;
+  max-width: 500px;
   aspect-ratio: 1.62;
 }
 
@@ -56,14 +49,18 @@ textarea {
   resize: none;
   font-family: Times New Roman;
   outline-width: 0;
-  &:focus {
-    border-color: blueviolet;
-  }
-  &:active {
-    border-color: yellow;
-  }
-
-  &:hover {
-    color: green;
+  // &:focus {
+  //   border-color: blueviolet;
+  // }
+  // &:active {
+  //   border-color: yellow;
+  // }
+  // &:hover {
+  //   color: green;
+  // }
+  &:disabled {
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.6em;
   }
 }

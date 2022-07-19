@@ -29,29 +29,37 @@ window.addEventListener("load", function() {
 function onSubmit(e) {
   e.preventDefault();
 
-  setTimeout(resetForm,700);
-  return false;
+  // setTimeout(resetForm,700);
+  // return false;
 
-  console.log("submitted", $textArea.value);
+  // console.log("submitted", $textArea.value);
   if (!$textArea.value.trim()) {
     alert("Nothing was submitted.");
-    showFailedState();
-    return;
+    // showFailedState();
+  } else {
+    showSuccessState();
+    setTimeout(openSendEmail, 1500);
   }
-  showSuccessState();
+
 }
 
 function showFailedState() {
-  $subtitle.style.visibility = "hidden";
-  $button.disabled = true;
-  $button.innerHTML = "Submitted";
+  document.querySelector(".subtitle").style.visibility = "hidden";
+  document.querySelector(".submit").disabled = true;
+  document.querySelector(".submit").innerHTML = "Submitted";
 }
 function showSuccessState() {
-  $subtitle.style.visibility = "hidden";
-  $button.style.visibility = "hidden";
-  $title.innerHTML = "Favorite Movie";
-  setStatus("has been added to your permenant record.");
-  $textArea.disabled = true;
+  document.querySelector(".subtitle").style.visibility = "hidden";
+  document.querySelector(".submit").style.visibility = "hidden";
+  document.querySelector(".title").innerHTML = "Favorite Movie";
+  // setStatus("has been added to your permenant record.");
+  document.querySelector("textarea").disabled = true;
+}
+
+function openSendEmail() {
+  var urlString = "mailto:?subject=Hey, did you know my favorite movie is " + $textArea.value.trim() + "?&body=What is your favorite movie?";
+
+  window.open(urlString);
 }
 
 function resetForm() {
