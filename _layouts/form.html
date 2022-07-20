@@ -7,17 +7,16 @@
   {%- include head.html -%}
 
   <body class="{{ page.layout }} {{ page_name }}">
-    <header>
-      <h1 class="title">Favorite Movie Form</h1>
-      <h3 class="subtitle">type the name of your favorite movie below</h3>
-    </header>
+      <h1 class="title">Favorite Movie Submission Form</h1>
+      <!-- <h3 class="subtitle">type the name of your favorite movie</h3> -->
 
     <form id="FavoriteMovieSubmissionForm">
       <div class="text-area-wrapper">
-        <textarea id="FavoriteMovieInput"> </textarea>
+        <textarea placeholder="type the name of your favorite movie here" id="FavoriteMovieInput"> </textarea>
       </div>
 
       <input class="submit" id="SaveForm" name="saveForm" type="submit" value="Submit" />
+      <a style="opacity: 0" id="ShareLink" href="#">Share</a>
     </form>
 
     {{ content }}

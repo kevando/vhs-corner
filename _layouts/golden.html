@@ -1,0 +1,23 @@
+<!-- @format -->
+
+{% assign a = page.name | split: '.' %} {% assign page_name = a[0] %}
+
+<!DOCTYPE html>
+<html>
+  {%- include head.html -%}
+
+  <body class="{{ page.layout }} {{ page_name }}">
+    {{ content }}
+
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+  </body>
+</html>

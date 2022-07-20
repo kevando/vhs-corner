@@ -29,43 +29,41 @@ window.addEventListener("load", function() {
 function onSubmit(e) {
   e.preventDefault();
 
-  // setTimeout(resetForm,700);
-  // return false;
-
-  // console.log("submitted", $textArea.value);
   if (!$textArea.value.trim()) {
     alert("Nothing was submitted.");
     // showFailedState();
   } else {
     showSuccessState();
-    setTimeout(openSendEmail, 1500);
+    // setTimeout(openSendEmail, 1500);
   }
 
 }
 
 function showFailedState() {
-  document.querySelector(".subtitle").style.visibility = "hidden";
+  // document.querySelector(".subtitle").style.visibility = "hidden";
   document.querySelector(".submit").disabled = true;
   document.querySelector(".submit").innerHTML = "Submitted";
 }
 function showSuccessState() {
-  document.querySelector(".subtitle").style.visibility = "hidden";
-  document.querySelector(".submit").style.visibility = "hidden";
+  // document.querySelector(".subtitle").style.visibility = "hidden";
+  document.querySelector(".submit").style.display = "none";
   document.querySelector(".title").innerHTML = "Favorite Movie";
   // setStatus("has been added to your permenant record.");
   document.querySelector("textarea").disabled = true;
+
+  document.getElementById("ShareLink").style.opacity = 1.0;
+
+  var urlString = "mailto:?subject=Hey, did you know my favorite movie is " + $textArea.value.trim() + "?&body=What is your favorite movie?";
+
+  document.getElementById("ShareLink").href = urlString;
 }
 
 function openSendEmail() {
-  var urlString = "mailto:?subject=Hey, did you know my favorite movie is " + $textArea.value.trim() + "?&body=What is your favorite movie?";
+  var urlString = "mailto:?subject=Hey, did you know my favorite movie is " + $textArea.value.trim() + "?&body=I am curious, what is your favorite movie?";
 
   window.open(urlString);
 }
 
 function resetForm() {
-  // $subtitle.style.visibility = "visible";
-  // $button.style.visibility = "visible";
-  // $title.innerHTML = "Favorite Movie Submission Form";
-  // setStatus("This will be added to your permenant record.");
   $textArea.value = "";
 }

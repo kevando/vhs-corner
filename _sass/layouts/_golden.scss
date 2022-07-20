@@ -1,0 +1,35 @@
+/** @format */
+
+// @import "compass/css3";
+
+$height: 50px;
+$golden-ratio: 1.61803398875;
+$background-color: gold;
+
+.row {
+  height: $height;
+  text-align: center;
+  background-color: $background-color;
+}
+
+// Debug
+.row:before {
+  content: "#{$height}";
+  line-height: $height;
+  color: white;
+}
+
+@for $i from 2 through 10 {
+  .row:nth-child(#{$i}) {
+    $height: $height * $golden-ratio;
+    height: $height;
+    $background-color: darken($background-color, 5%);
+    background-color: $background-color;
+  }
+
+  // Debug
+  .row:nth-child(#{$i}):before {
+    content: "#{$height}";
+    line-height: $height;
+  }
+}

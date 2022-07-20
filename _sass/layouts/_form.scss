@@ -4,34 +4,12 @@ h3 {
   font-weight: 100;
 }
 
-// input[type="submit"] {
-//   margin: 15px 0;
-//   font-size: 1rem;
-//   padding: 2px 5px;
-// }
-/** @format */
-
-:root {
-  --base-size: 2.05rem;
-  --title-size: 10vw;
-  --subtitle-size: calc(var(--title-size) * 0.62);
-  --header-height: calc(calc(var(--base-size) * 1.62) + var(--base-size) + 0px);
-}
-
-header {
-  height: var(--header-height);
-  // margin-bottom:var(--base-size);
-  .title {
-    font-size: var(--base-size);
-    line-height: 1.2em;
-    margin: 0;
-    margin-top: 1.62em;
-  }
-
-  .subtitle {
-    font-size: calc(var(--base-size) * 0.56);
-    margin: 0;
-  }
+.title {
+  --base-size: 2.2rem;
+  font-size: var(--base-size);
+  line-height: 1.6em;
+  margin: 0;
+  // margin-top: 1.0em;
 }
 
 .text-area-wrapper {
@@ -49,6 +27,9 @@ textarea {
   resize: none;
   font-family: Times New Roman;
   outline-width: 0;
+  font-size: 1.6em;
+
+  transition: all 200ms ease-in;
   // &:focus {
   //   border-color: blueviolet;
   // }
@@ -61,6 +42,18 @@ textarea {
   &:disabled {
     background: transparent;
     border-color: transparent;
-    font-size: 1.6em;
+    // font-size: 1.6em;
+
+    color: black;
   }
+
+  &::placeholder {
+    font-size: 0.8em;
+    opacity: .5;
+    // color: red;
+  }
+}
+
+a {
+  transition: all 300ms 200ms ease-in;
 }
