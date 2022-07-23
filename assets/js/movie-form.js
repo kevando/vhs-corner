@@ -1,69 +1,56 @@
-var $textArea = document.getElementById("FavoriteMovieInput");
+
+
+/* 
+     Favorite Movie Input Form
+
+ -____-
+
+*/
+
+
+
+var $input = document.getElementById("FavoriteMovieInput");
 var $form = document.getElementById("FavoriteMovieSubmissionForm");
-var $title = document.getElementById("Title");
-var $subtitle = document.getElementById("Subtitle");
 var $button = document.getElementById("SaveForm");
 
+window.addEventListener("load", onLoad);
 
-$textArea.addEventListener("input", onInputChange, false);
-$textArea.addEventListener("keyup", onKeyUp, false);
+function onLoad() {
+    $input.value = $input.value.trim(); // clear spaces
+}
+
 $form.addEventListener("submit", onSubmit);
 
 
-function setStatus(msg) {
-  // document.getElementById("ResponseText").innerHTML = msg;
-};
-
-function onInputChange() {
-  console.log("changed");
-}
-function onKeyUp() {
-  console.log("key yp");
-  // setStatus("key up");
-}
-
-window.addEventListener("load", function() {
-  $textArea.value = $textArea.value.trim();
-});
-
 function onSubmit(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!$textArea.value.trim()) {
-    alert("Nothing was submitted.");
-    // showFailedState();
-  } else {
-    showSuccessState();
-    // setTimeout(openSendEmail, 1500);
-  }
-
+    if (!$input.value.trim()) failedState();
+    else successState();
 }
 
-function showFailedState() {
-  // document.querySelector(".subtitle").style.visibility = "hidden";
-  document.querySelector(".submit").disabled = true;
-  document.querySelector(".submit").innerHTML = "Submitted";
+function failedState() {
+    alert("YOU SUBMITTED NOTHING");
+    $button.disabled = true;
+    $button.value = "You Failed";
 }
-function showSuccessState() {
-  // document.querySelector(".subtitle").style.visibility = "hidden";
-  document.querySelector(".submit").style.display = "none";
-  document.querySelector(".title").innerHTML = "Favorite Movie";
-  // setStatus("has been added to your permenant record.");
-  document.querySelector("textarea").disabled = true;
+function successState() {
 
-  document.getElementById("ShareLink").style.opacity = 1.0;
+    $button.style.display = "none";
+    $input.style.visibility = "hidden";
+    // $input.disabled = true;
 
-  var urlString = "mailto:?subject=Hey, did you know my favorite movie is " + $textArea.value.trim() + "?&body=What is your favorite movie?";
 
-  document.getElementById("ShareLink").href = urlString;
+    document.querySelector("h3").innerHTML = "Favorite Movie Submitted"
+    document.getElementById("ShareLink").style.opacity = 1.0;
+
+    var urlString = "mailto:?subject=📼 ?&body=Hi Mom, Did you know my favorite movie is "+ $input.value+"? What's your favorite movie?";
+
+    document.getElementById("ShareLink").href = urlString;
 }
 
 function openSendEmail() {
-  var urlString = "mailto:?subject=Hey, did you know my favorite movie is " + $textArea.value.trim() + "?&body=I am curious, what is your favorite movie?";
+    // var urlString = "mailto:?subject=Hey, did you know my favorite movie is " + $textArea.value.trim() + "?&body=I am curious, what is your favorite movie?";
 
-  window.open(urlString);
-}
-
-function resetForm() {
-  $textArea.value = "";
+    // window.open(urlString);
 }

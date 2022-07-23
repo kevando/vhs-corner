@@ -1,15 +1,32 @@
 /** @format */
 
-h3 {
-  font-weight: 100;
+body.form {
+    main {
+
+        margin: 0 auto;
+        max-width: $containerWidth;
+        min-width: 500px;
+        font-weight: normal;
+        line-height: 1.62;
+    
+        padding: 0 1.6vw;
+    }
+  h3 {
+    font-weight: 100;
+    margin: 1.6em 0 1vh 0;
+    font-size: 20px;
+    line-height: 1.6em;
+    strong {
+        font-weight: 100;
+        // color: #ff087c;
+        text-decoration: underline;
+    }
+  }
 }
 
-.title {
-  --base-size: 2.2rem;
-  font-size: var(--base-size);
-  line-height: 1.6em;
-  margin: 0;
-  // margin-top: 1.0em;
+textarea:focus, input:focus{
+    outline: none;
+    border-color: #ffffff;
 }
 
 .text-area-wrapper {
@@ -21,13 +38,33 @@ h3 {
   aspect-ratio: 1.62;
 }
 
-textarea {
+
+
+// .input-wrapper {
+    
+// }
+input.submissionForm {
+    width: 50vw;
+    font-size: 0.5em;
+    border-color: #ffffff;
+}
+
+
+.button-wrapper {
+    margin: 16px 0 0 2px;
+}
+
+input[type=submit] {
+    font-size: 12px;
+}
+
+textarea.submissionForm {
   height: 100%;
   width: 100%;
   resize: none;
   font-family: Times New Roman;
   outline-width: 0;
-  font-size: 1.6em;
+  font-size: 1.3em;
 
   transition: all 200ms ease-in;
   // &:focus {
@@ -49,11 +86,11 @@ textarea {
 
   &::placeholder {
     font-size: 0.8em;
-    opacity: .5;
+    opacity: 0.5;
     // color: red;
   }
 }
 
 a {
-  transition: all 300ms 200ms ease-in;
+//   transition: all 300ms ease-out;
 }

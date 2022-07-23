@@ -1,29 +1,31 @@
+/** @format */
+
 $containerWidth: 66vw;
 $fontSize: calc(#{$containerWidth} / 30);
 
-body {
-	background-color: #ddd;
-	font-size: 100%;
-	font-family: Georgia, serif;
-}
+body.default {
+  background-color: #ddd;
+  font-size: 100%;
+  font-family: Georgia, serif;
 
-main {
-	border: solid 1px white;
-	margin: 100px auto;
-	max-width: $containerWidth;
+  main {
+    border: solid 1px white;
+    margin: 100px auto;
+    max-width: $containerWidth;
     min-width: 500px;
-	font-weight: normal;
-	line-height: 1.62;
+    font-weight: normal;
+    line-height: 1.62;
 
     padding: 0 1.6vw;
-}
+  }
 
-h1 {
-	font-size: calc(#{$fontSize}*1.9);
-	// margin-bottom: 1.62em;
-}
+  h1 {
+    font-size: calc(#{$fontSize}* 1.9);
+    // margin-bottom: 1.62em;
+  }
 
-p {
-	font-size: $fontSize;
-	margin-bottom: 1.62em;
+  p {
+    font-size: $fontSize;
+    margin-bottom: 1.62em;
+  }
 }

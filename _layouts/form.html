@@ -1,26 +1,10 @@
 <!-- @format -->
 
-{% assign cachedz = site.time | date: '%M%S' %} {% assign a = page.name | split: '.' %} {% assign page_name = a[0] %}
-
 <!DOCTYPE html>
 <html>
   {%- include head.html -%}
 
   <body class="{{ page.layout }} {{ page_name }}">
-      <h1 class="title">Favorite Movie Submission Form</h1>
-      <!-- <h3 class="subtitle">type the name of your favorite movie</h3> -->
-
-    <form id="FavoriteMovieSubmissionForm">
-      <div class="text-area-wrapper">
-        <textarea placeholder="type the name of your favorite movie here" id="FavoriteMovieInput"> </textarea>
-      </div>
-
-      <input class="submit" id="SaveForm" name="saveForm" type="submit" value="Submit" />
-      <a style="opacity: 0" id="ShareLink" href="#">Share</a>
-    </form>
-
-    {{ content }}
-
-    <script src="/assets/js/movie-form.js?cachedz={{ cachedz }}"></script>
+    <main>{{ content }} {% include movie-form.html %}</main>
   </body>
 </html>
