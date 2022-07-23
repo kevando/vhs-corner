@@ -5,4 +5,3 @@ permalink: /
 ---
 
 
-### Favorite Movie Submission Form
