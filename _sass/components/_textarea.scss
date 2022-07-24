@@ -1,0 +1,48 @@
+/** @format */
+
+textarea {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  font-family: monospace;
+  outline-width: 0;
+  font-size: 1.5em;
+  line-height: 1.6em;
+  padding: 1vh;
+
+  transition: all 200ms ease-in;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #03a9f4;
+  border-radius: 0;
+  // border-image: initial;
+
+  // &:focus {
+  //   border-color: blueviolet;
+  // }
+  // &:active {
+  //   border-color: yellow;
+  // }
+  // &:hover {
+  //   color: green;
+  // }
+  &:disabled {
+    background: transparent;
+    border-color: transparent;
+    // font-size: 1.6em;
+
+    color: black;
+  }
+
+  &::placeholder {
+    font-size: 0.8em;
+    opacity: 0.5;
+    // color: red;
+  }
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #ffffff;
+}
