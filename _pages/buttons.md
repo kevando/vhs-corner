@@ -8,15 +8,12 @@ permalink: /buttons
 
 asdf
 
+<script src="https://codepen.io/kevando/pen/JjLrgbM.js"></script>
 <link rel="stylesheet" href="https://codepen.io/kevando/pen/JjLrgbM.css" />
 
 <div id="DEMO">
 
 <button>button</button>
-
-<br /><br /><br />
-
-  <input type="submit" value="submit" />
 
 <br /><br /><br />
 
