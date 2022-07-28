@@ -19,9 +19,9 @@ asdf
 
   <div class="buttons-container">
 
-  <button class="cozy-btn">Cozy</button>
-  <button class="cozy-btn">Cozy</button>
-  <button class="cozy-btn pressing">Cozy</button>
+  <button class="cozy-btn">⭐️ Creators</button>
+  <button class="cozy-btn">👩‍💻 Gigs</button>
+  <button class="cozy-btn pressing">✍️ Post Gig</button>
 
   </div>
 
