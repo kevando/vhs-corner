@@ -1,8 +1,11 @@
 ---
 layout: base
-title: Buttons
+title: Cozy Buttons
 permalink: /buttons
+codepen: MWVENxv
 ---
+
+<!-- COZY = MWVENxv -->
 
 <!-- @format -->
 {% assign cachedz = site.time | date: '%M%S' %}
@@ -20,20 +23,17 @@ asdf
 
   <br /><br /><br />
 
-  <button class="retro">retro button</button>
+  <button class="cozy">⭐️ Cozy</button>
 
   <br /><br /><br />
 
-  <button class="retro pressed">button</button>
+  <button class="cozy">cozy</button>
 
-  <br /><br /><br />
-
-  <button class="retro touching">button</button>
 
 
 </div>
 
 
 
-<script src="https://codepen.io/kevando/pen/JjLrgbM.js"></script>
-<link rel="stylesheet" href="https://codepen.io/kevando/pen/JjLrgbM.css" />
+<script src="https://codepen.io/kevando/pen/{{ page.codepen }}.js"></script>
+<link rel="stylesheet" href="https://codepen.io/kevando/pen/{{ page.codepen }}.css" />
